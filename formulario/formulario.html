@@ -9,6 +9,24 @@
     <body>
         <h1>Clases de APW 2do curso - SMR</h1>
         <h2>Formulario</h2>
-        
+        <form action="#" method="post">
+            Dime tu nombre :
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+
+            <label for="edad">Edad: </label>
+            <input type="number" id="edad" min="17" max="65" required>
+            <br>
+
+            <label for="password">Contraseña: </label>
+            <input type="password" id="Contraseña" name="Contraseña">
+            <br>
+            <label for="genero">Elige tu genero: </label>
+            <input type="radio" id="genero" name="genero" value="femenino"> Femenino
+            <input type="radio" id="genero" name="genero" value="masculino"> Masculino
+            <input type="radio" id="genero" name="genero" value="otro"> otro
+
+
+        </form>
     </body>
 </html>
