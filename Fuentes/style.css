@@ -1,0 +1,22 @@
+@font-face {
+    font-family: mi fuente molona;
+    src: url(./Fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+header {
+    background-color: rgb(117, 248, 204);
+}
+
+h1 {
+    font-size: 22pt;
+    text-shadow: 2px 1px 1px rgba(6, 235, 36, 0.349);
+}
+
+p {
+    font-family: mi fuente molona;
+    font-size: 16pt;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: capitalize; 
+}
