@@ -1,0 +1,29 @@
+#caja1{
+    background-color: cadetblue;
+    width: 30%;
+    height: 100px;
+    text-align: center;
+    margin: 20px;
+    border: solid 1px black;
+    float: left;
+}
+
+#caja2{
+    background-color: rgb(231, 235, 15);
+    width: 30%;
+    height: 100px;
+    text-align: center;
+    margin: 20px;
+    border: solid 1px black;
+    float: left;
+}
+
+#caja3{
+    background-color: rgb(221, 11, 140);
+    width: 30%;
+    height: 100px;
+    text-align: center;
+    margin: 20px;
+    border: solid 1px black;
+    float: left;
+}
