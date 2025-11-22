@@ -1,0 +1,69 @@
+/* General body y fuentes */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+/* Títulos */
+h1 {
+  color: #0275d8;
+  border-bottom: 3px solid #0275d8;
+  padding-bottom: 8px;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #5a5a5a;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 6px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+/* Párrafos */
+p b {
+  color: #0275d8;
+}
+
+/* Listas y enlaces */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #0275d8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #014f86;
+}
+
+/* Separadores */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+/* Responsive y ajustes */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+}

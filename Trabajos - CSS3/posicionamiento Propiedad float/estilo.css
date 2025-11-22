@@ -1,0 +1,26 @@
+#caja1 {
+  background-color: blue;
+  border: 2px solid gray;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  height: 100px;
+  float: left;
+}
+
+#caja2 {
+  background-color: #f5ec6e;
+  border: none;
+  width: 20%;
+  height: 50px;
+  float: left;
+}
+
+#caja3 {
+  background-color: #ffcccc;
+  border: 1px double black;
+  width: 20%;
+  height: 50px;
+  float: left;
+  clear: left;
+}
