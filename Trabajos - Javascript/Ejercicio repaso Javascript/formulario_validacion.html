@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>formulario validación</title>
+    <meta name="description" content="formulario">
+    <meta name="author" content="Sergio Chorques">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      #mensajes { margin-top: 10px; font-family: Arial, sans-serif; }
+      .ok { color: green; }
+      .error { color: red; }
+    </style
+</head>
+
+<body>
+    <header>
+        <h1>Formulario validación</h1>
+    </header>
+    <form id="formRegistro">
+      <label>
+        Nombre:
+        <input type="text" id="nombre">
+      </label>
+      <br>
+
+      <label>
+        Edad:
+        <input type="number" id="edad">
+      </label>
+      <br>
+
+      <label>
+        Email:
+        <input type="text" id="email">
+      </label>
+      <br>
+
+      <label>
+        Contraseña:
+        <input type="password" id="password">
+      </label>
+      <br>
+
+      <label>
+        Repetir contraseña:
+        <input type="password" id="repetirPassword">
+      </label>
+      <br>
+
+      <button type="button" onclick="validarFormulario()">Validar</button>
+    </form>
+
+    <div id="mensajes"></div>
+
+    <script>
+
+      function validarNombre(nombre) {
+        if (!nombre) return false;
+        if (nombre.trim().length < 3) return false;
+        return true;
+      }
+
+      function validarEdad(edad) {
+        if (edad === "" || isNaN(edad)) return false;
+        const n = Number(edad);
+        if (n < 18) return false;
+        return true;
+      }
+
+      function validarEmail(email) {
+        if (!email) return false;
+
+        const posicionArroba = email.indexOf("@");
+        const posicionPunto = email.lastIndexOf(".");
+
+        if (posicionArroba === -1) return false;       // no hay @
+        if (posicionPunto === -1) return false;        // no hay .
+        if (posicionArroba > posicionPunto) return false; // @ después del punto
+
+        return true;
+      }
+
+      function validarPassword(password) {
+        if (!password) return false;
+        if (password.length < 6) return false;
+        return true;
+      }
+
+      function validarPasswordRepetida(password, repetirPassword) {
+        if (password !== repetirPassword) return false;
+        return true;
+      }
+
+      function validarFormulario() {
+        // 1. Leer valores
+        const nombre = document.getElementById("nombre").value;
+        const edad = document.getElementById("edad").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const repetirPassword = document.getElementById("repetirPassword").value;
+
+        const errores = [];
+
+        if (!validarNombre(nombre)) {
+          errores.push("El nombre debe tener al menos 3 caracteres y no estar vacío.");
+        }
+
+        if (!validarEdad(edad)) {
+          errores.push("La edad debe ser un número mayor o igual que 18.");
+        }
+
+        if (!validarEmail(email)) {
+          errores.push("El email debe contener '@', '.', y la '@' debe ir antes del '.'.");
+        }
+
+        if (!validarPassword(password)) {
+          errores.push("La contraseña debe tener al menos 6 caracteres.");
+        }
+
+        if (!validarPasswordRepetida(password, repetirPassword)) {
+          errores.push("Las contraseñas no coinciden.");
+        }
+
+        const mensajesDiv = document.getElementById("mensajes");
+
+        if (errores.length === 0) {
+          mensajesDiv.className = "ok";
+          mensajesDiv.innerHTML = "Formulario válido. Registro correcto.";
+        } else {
+          let html = "<p class='error'>Formulario NO válido</p><ul>";
+          for (let i = 0; i < errores.length; i++) {
+            html += "<li>" + errores[i] + "</li>";
+          }
+          html += "</ul>";
+          mensajesDiv.className = "error";
+          mensajesDiv.innerHTML = html;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
