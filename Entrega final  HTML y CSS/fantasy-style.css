@@ -125,7 +125,6 @@ strong {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-/* Enlaces */
 a {
     color: #daa520;
     text-decoration: none;
@@ -186,7 +185,6 @@ th {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
 }
 
-/* Formularios */
 form {
     max-width: 700px;
     margin: 30px auto;
@@ -247,7 +245,6 @@ button[type="submit"]:hover {
     box-shadow: 0 12px 30px rgba(218,165,32,0.3);
 }
 
-/* Personajes */
 .personaje {
     margin: 40px 0;
     padding: 32px;
@@ -286,7 +283,6 @@ iframe,video,img {
     border: 3px solid rgba(218, 165, 32, 0.3);
 }
 
-/* Footer */
 footer {
     background: linear-gradient(180deg, #1a120f 0%, #0f0a08 100%);
     color: #b8a68a;
@@ -298,7 +294,6 @@ footer {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-/* Responsive - Móviles */
 @media (max-width: 768px) {
     body { padding: 10px; }
     main { gap: 20px; }
@@ -306,3 +301,4 @@ footer {
     nav a { margin: 5px 0; text-align: center; }
     header h1 { font-size: 2em; }
 }
+
