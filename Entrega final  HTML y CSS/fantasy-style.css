@@ -9,35 +9,22 @@ body {
     line-height: 1.6;
     color: #e8d5b7;
     background: linear-gradient(135deg, #0f0a08 0%, #1a120f 50%, #2a1f16 100%);
-    min-height: 100vh;
+    padding: 20px;
 }
 
 header h1 {
     background: linear-gradient(45deg, #4a2c1a, #6b3e24);
     color: #f0e6d2;
     text-align: center;
-    padding: 2rem;
+    padding: 30px;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
     font-size: 2.5rem;
     position: relative;
 }
 
-header h1::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 5px;
-    background: linear-gradient(90deg, #b8860b, #daa520);
-    border-radius: 3px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
-}
-
 header img {
     display: block;
-    margin: 1rem auto;
+    margin: 20px auto;
     max-width: 300px;
     filter: drop-shadow(0 6px 12px rgba(0,0,0,0.7));
 }
@@ -48,7 +35,6 @@ nav {
     border-bottom: 4px solid #8b7355;
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 
 nav ul {
@@ -67,7 +53,7 @@ nav ul {
 nav a {
     color: #e8d5b7;
     text-decoration: none;
-    padding: 1rem 1.8rem;
+    padding: 12px 20px;
     font-weight: 600;
     transition: all 0.4s ease;
     border-right: 1px solid rgba(139, 115, 85, 0.3);
@@ -75,22 +61,6 @@ nav a {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-nav li:last-child a {
-    border-right: none;
-}
-
-nav a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #daa520, #f4e4bc);
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
-    box-shadow: 0 2px 4px rgba(218,165,32,0.5);
-}
 
 nav a:hover {
     background-color: rgba(139, 115, 85, 0.2);
@@ -98,47 +68,27 @@ nav a:hover {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
 }
 
-nav a:hover::before {
-    transform: scaleX(1);
-}
-
 main {
     display: grid;
     grid-template-columns: 1fr;
-    min-height: 70vh;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 30px;
+    padding: 20px 0;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 article, section {
-    background: rgba(35, 25, 18, 0.95);
-    padding: 2.5rem;
+    background: linear-gradient(45deg, #daa520, #b8860b, #cd853f); 
+    padding: 25px;
     border-radius: 20px;
     box-shadow: 0 12px 40px rgba(0,0,0,0.6);
     border: 3px solid #6b3e24;
-    position: relative;
-    backdrop-filter: blur(10px);
 }
-
-article::before, section::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(45deg, #daa520, #b8860b, #cd853f);  /* borde dorado fijo */
-    border-radius: 23px;
-    z-index: -1;
-}
-
 
 h2 {
     color: #f4e4bc;
-    font-size: 2.2rem;
-    margin-bottom: 1.8rem;
+    font-size: 2em;
+    margin-bottom: 20px;
     text-align: center;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
     font-weight: bold;
@@ -146,13 +96,13 @@ h2 {
 
 h3 {
     color: #d4af37;
-    margin: 1.8rem 0 1.2rem;
+    margin: 20px 0;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
-p, blockquote, .descripcion {
-    margin-bottom: 1.2rem;
+p, .descripcion {
+    margin-bottom: 15px;
     text-align: center;
     line-height: 1.9;
     color: #e8d5b7;
@@ -160,12 +110,11 @@ p, blockquote, .descripcion {
 
 blockquote {
     background: rgba(75, 44, 26, 0.8);
-    padding: 2rem;
+    padding: 20px;
     border-left: 6px solid #daa520;
     font-style: italic;
-    font-size: 1.2rem;
     text-align: center;
-    margin: 2rem auto;
+    margin: 20px auto;
     max-width: 85%;
     border-radius: 15px;
     box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
@@ -178,25 +127,23 @@ strong {
 
 /* Enlaces */
 a {
-    color: #daa520 !important;
+    color: #daa520;
     text-decoration: none;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
+    padding: 8px 15px;
     border-radius: 25px;
     display: inline-block;
     background: rgba(218, 165, 32, 0.15);
     border: 2px solid rgba(218, 165, 32, 0.4);
     transition: all 0.4s ease;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-    margin: 0.3rem;
+    margin: 5px;
     min-width: 120px;
     text-align: center;
 }
 
 a:hover {
-    color: #f4e4bc !important;
+    color: #f4e4bc;
     background: linear-gradient(45deg, #daa520, #f4e4bc);
-    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
 }
@@ -208,8 +155,8 @@ ul {
 
 ul li {
     background: rgba(50, 35, 25, 0.8);
-    margin: 0.8rem 0;
-    padding: 1.2rem;
+    margin: 10px 0;
+    padding: 15px;
     border-radius: 12px;
     border-left: 5px solid #daa520;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
@@ -218,7 +165,7 @@ ul li {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
+    margin: 20px 0;
     background: rgba(35, 25, 18, 0.95);
     border-radius: 15px;
     overflow: hidden;
@@ -226,7 +173,7 @@ table {
 }
 
 th, td {
-    padding: 1.2rem;
+    padding: 15px;
     text-align: center;
     border: 2px solid #6b3e24;
     color: #e8d5b7;
@@ -242,27 +189,26 @@ th {
 /* Formularios */
 form {
     max-width: 700px;
-    margin: 2rem auto;
-    padding: 2.5rem;
+    margin: 30px auto;
+    padding: 25px;
     background: rgba(35, 25, 18, 0.97);
     border-radius: 25px;
     box-shadow: 0 15px 50px rgba(0,0,0,0.7);
     border: 4px solid #6b3e24;
-    backdrop-filter: blur(15px);
 }
 
 label {
     display: block;
-    margin: 1.2rem 0 0.8rem;
+    margin: 19.2px 0 12.8px;
     font-weight: bold;
     color: #f4e4bc;
     text-align: center;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-input[type="text"], input[type="email"], textarea {
+input, textarea {
     width: 100%;
-    padding: 1.2rem;
+    padding: 12px;
     border: 3px solid #6b3e24;
     border-radius: 12px;
     font-family: inherit;
@@ -282,14 +228,14 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 button[type="submit"] {
     background: linear-gradient(45deg, #4a2c1a, #6b3e24, #daa520);
     color: #f4e6bc;
-    padding: 1.2rem 3rem;
+    padding: 15px 30px;
     border: none;
     border-radius: 30px;
-    font-size: 1.3rem;
+    font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
     display: block;
-    margin: 2.5rem auto 0;
+    margin: 20px auto;
     transition: all 0.4s;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
@@ -303,9 +249,9 @@ button[type="submit"]:hover {
 
 /* Personajes */
 .personaje {
-    margin: 2.5rem 0;
-    padding: 2rem;
-    background: rgba(35, 25, 18, 0.96);
+    margin: 40px 0;
+    padding: 32px;
+    background: linear-gradient(45deg, #daa520, #b8860b, #cd853f); 
     border-radius: 25px;
     box-shadow: 0 15px 50px rgba(0,0,0,0.7);
     border: 4px solid #6b3e24;
@@ -323,17 +269,17 @@ button[type="submit"]:hover {
 figcaption {
     background: linear-gradient(45deg, #4a2c1a, #6b3e24);
     color: #f4e4bc;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
     border-radius: 25px;
-    margin-top: 1.5rem;
+    margin-top: 24px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
     text-align: center;
 }
 
-iframe, video, img {
+iframe,video,img {
     display: block;
-    margin: 2rem auto;
+    margin: 20px auto;
     max-width: 100%;
     border-radius: 18px;
     box-shadow: 0 12px 40px rgba(0,0,0,0.7);
@@ -345,29 +291,18 @@ footer {
     background: linear-gradient(180deg, #1a120f 0%, #0f0a08 100%);
     color: #b8a68a;
     text-align: center;
-    padding: 3rem 2rem;
-    margin-top: 4rem;
+    padding: 30px;
+    margin-top: 50px;
     line-height: 1.9;
     border-top: 4px solid #6b3e24;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-/* Responsive */
+/* Responsive - Móviles */
 @media (max-width: 768px) {
-    main {
-        padding: 1.5rem;
-        gap: 1.5rem;
-    }
-    header h1 {
-        font-size: 2.2rem;
-    }
-    .personaje img {
-        width: 200px;
-        height: 200px;
-    }
-    a {
-        display: block;
-        margin: 0.5rem auto;
-        max-width: 250px;
-    }
+    body { padding: 10px; }
+    main { gap: 20px; }
+    nav ul { flex-direction: column; }
+    nav a { margin: 5px 0; text-align: center; }
+    header h1 { font-size: 2em; }
 }
