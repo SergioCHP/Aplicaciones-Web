@@ -1,0 +1,38 @@
+.Valido{
+    color: green;
+    font-weight: bold;
+}
+
+.no_valido{
+    color: red;
+    font-weight: bold;
+}
+
+#contador {
+    font-weight: bold;
+}
+
+    .rojo {
+    color:red
+}
+    .normal {
+    color: black;
+}
+
+/* Ejercicio 4 */
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode p,
+body.dark-mode h2,
+body.dark-mode label {
+    color: #e0e0e0;
+}
+
+/* Suaviza el cambio */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}

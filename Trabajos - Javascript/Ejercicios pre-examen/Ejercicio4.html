@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Sergio Chorques">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Ejercicio pre-examen</title>
+    </head>
+    <body>
+        <h2>Modo Oscuro</h2>
+        
+        <input type="checkbox" id="check"> <label> Modo Oscuro </label>
+
+        <p id="texto">Esta página cambiará cuando activemos el Modo Oscuro</p>
+
+
+        <script>
+            const check = document.getElementById("check");
+            const body = document.body;
+
+            check.addEventListener("change", function () {
+                body.classList.toggle("dark-mode");
+            });
+        </script>
+    </body>
+</html>

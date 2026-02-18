@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Sergio Chorques">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Ejercicio pre-examen</title>
+    </head>
+    <body>
+
+        <h1>Contador de caracteres</h1>
+
+        <textarea id="texto" rows="5" cols="40"
+            placeholder="Escribe algo (max recomendado: 100 caracteres)"></textarea>
+
+        <p>Caracteres: <span id="contador" class="normal">0</span></p>
+
+        <script>
+            // 1. Captura textarea y contador
+            const texto = document.getElementById("texto");
+            const contador = document.getElementById("contador");
+
+            // 2. Añade evento 'input'
+            texto.addEventListener("input", function () {
+                const longitud = texto.value.length;
+
+                // 3. Actualiza el número
+                contador.textContent = longitud;
+
+                // 4. Cambia clases según longitud
+                contador.classList.remove("normal", "rojo");
+
+                if (longitud > 100) {
+                    contador.classList.add("rojo");
+                } else {
+                    contador.classList.add("normal");
+                }
+            });
+        </script>
+
+    </body>
+</html>

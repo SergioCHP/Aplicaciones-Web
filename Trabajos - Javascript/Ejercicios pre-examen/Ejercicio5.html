@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Sergio Chorques">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Ejercicio pre-examen</title>
+    </head>
+    <body>
+        <h2>Validar edad y mostrar acceso</h2>
+        
+        <label>
+            Edad:<input type="text" id="edad" size="3">
+        </label>
+
+        <button id="btnComprobar">Comprobar edad</button>
+
+        <p id="mensaje"></p>
+
+        <script>
+            const btnComprobar = document.getElementById("btnComprobar");
+            const edad = document.getElementById("edad");
+            const mensaje = document.getElementById("mensaje");
+
+            btnComprobar.addEventListener("click", function(){
+
+                const anyos = edad.value;
+
+                mensaje.classList.remove("Valido", "no_valido");
+
+                if (anyos === "" || isNaN(anyos)) {
+                    mensaje.textContent = "Error: introduce una edad válida";
+                    mensaje.classList.add("no_valido");
+
+                } else if (anyos < 18) {
+                    mensaje.textContent = "No tienes acceso";
+                    mensaje.classList.add("no_valido");
+
+                } else {
+                    mensaje.textContent = "Acceso permitido";
+                    mensaje.classList.add("Valido");
+                }   
+
+            });
+        </script>
+    </body>
+</html>
